@@ -38,3 +38,38 @@ Si por casualidad tienes docker descargado, pero al ingresar el comando te muest
 ```bash
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 ```
+
+## Postman
+En ambos casos se puede utilizar postman para realiza las peticiones, la documentacion e informacion sobre como realizarlas estan en el siguiente link: https://documenter.getpostman.com/view/33275918/2sA2rGvKh9
+
+## Base de datos
+Para la creacion de la base de datos se utilizo la siguiente entidad
+
+![Descripción de la imagen](Images/readme/Users.drawio.png)
+
+Como se manejo desde docker se usaron los comandos basicos por lo que para crear la base de datos se crea de la siguiente manera
+```bash
+CREATE DATABASE pruebasCode;
+
+USE pruebasCode;
+
+CREATE TABLE users (
+    id_usuario int AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(250) NOT NULL,
+    contrasea VARCHAR(250) NOT NULL,
+    estado VARCHAR(250)
+);
+
+('john_doe', 'jd2023', 'activo'),
+('maria_smith', 'ms456', 'activo'),
+('juan_perez', 'jp789', 'inactivo'),
+('laura_garcia', 'lg123', 'activo'),
+('carlos_ruiz', 'cr567', 'inactivo'),
+('ana_rodriguez', 'ar890', 'activo'),
+('pedro_martinez', 'pm234', 'activo'),
+('sara_lopez', 'sl567', 'inactivo'),
+('javier_gomez', 'jg098', 'activo'),
+('luisa_hernandez', 'lh321', 'activo');
+```
+
+Con todo lo anterior deberia trabajar normalmente
