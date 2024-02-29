@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pruebasCode
+      MYSQL_DATABASE: usuarios_prueba
+      MYSQL_USER: cristhian
+      MYSQL_PASSWORD: pruebasCodecris
+    ports:
+      - "3306:3306"
+    networks:
+      - my_app_network   # Asigna el servicio MySQL a la red personalizada
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    networks:
+      - my_app_network   # Asigna el servicio de la aplicación a la misma red personalizada
+
+networks:
+  my_app_network:         # Define una red personalizada llamada 'my_app_network'
+    driver: bridge        # Usa el controlador de red 'bridge'

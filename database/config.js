@@ -1,21 +1,13 @@
-const mongoose = require('mongoose');
+// const Sequelize = require("sequelize");
+// require("dotenv").config();
 
-const dbConnection = async () => {
+// const sequelize = new Sequelize('usuarios_prueba', 'root', 'pruebasCode', {
+//   host: 'localhost', // Nombre completo del servicio del contenedor MySQL en Docker Compose
+//   port: 3306,
+//   dialect: 'mysql',
+//   dialectOptions: {
+//     connectTimeout: 120000 // Tiempo de espera en milisegundos (por ejemplo, 60 segundos)
+//   }
+// });
 
-    try {
-        await mongoose.connect(process.env.MONGODB_CNN, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        });
-
-        console.log('Base de datos online');
-
-    } catch (error) {
-        console.log(error);
-        throw new Error('Error al iniciar la base de datos');
-    }
-}
-
-module.exports = {
-    dbConnection,
-}
+// module.exports = {sequelize};
