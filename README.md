@@ -39,9 +39,6 @@ Si por casualidad tienes docker descargado, pero al ingresar el comando te muest
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 ```
 
-## Postman
-En ambos casos se puede utilizar postman para realiza las peticiones, la documentacion e informacion sobre como realizarlas estan en el siguiente link: https://documenter.getpostman.com/view/33275918/2sA2rGvKh9
-
 ## Base de datos
 Para la creacion de la base de datos se utilizo la siguiente entidad
 
@@ -72,4 +69,9 @@ CREATE TABLE users (
 ('luisa_hernandez', 'lh321', 'activo');
 ```
 
-Con todo lo anterior deberia trabajar normalmente
+Con todo lo anterior deberia trabajar normalmente.
+
+Se puede continuar con las pruebas.
+
+## Postman
+En ambos casos se puede utilizar postman para realiza las peticiones, la documentacion e informacion sobre como realizarlas estan en el siguiente link: https://documenter.getpostman.com/view/33275918/2sA2rGvKh9
